@@ -1,0 +1,19 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Coverage reports
+.coverage
+
+# Virtual environments
+venv/
+
+# Pytest cache
+.pytest_cache/
+
+# Optional: IDE / editor files
+.vscode/
+.idea/
+*.swp
