@@ -1,0 +1,26 @@
+JWKS Server
+A RESTful JWKS (JSON Web Key Set) server that provides public keys for verifying 
+JSON Web Tokens (JWTs) with key expiry and unique identifiers.
+
+Overview
+This server implements:
+- RSA key pair generation with unique identifiers (kid)
+- Key expiry management for enhanced security
+- JWKS endpoint serving unexpired public keys
+- Authentication endpoint issuing signed JWTs
+- Support for issuing expired JWTs for testing purposes
+
+Requirements
+- Python 3.7+
+- Flask
+- PyJWT
+- cryptography
+- waitress
+
+Installation
+1. Clone the repository
+2. Create a virtual environment:
+    bash  python -m venv venv
+    source venv/bin/activate  # On Windows: venv\Scripts\activate
+3. Install dependencies:
+    bash  pip install flask pyjwt cryptography waitress pytest pytest-cov
