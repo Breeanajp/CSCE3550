@@ -1,6 +1,5 @@
 JWKS Server
-A RESTful JWKS (JSON Web Key Set) server that provides public keys for verifying 
-JSON Web Tokens (JWTs) with key expiry and unique identifiers.
+A RESTful JWKS (JSON Web Key Set) server that provides public keys with unique identifiers (kid) for verifying JSON Web Tokens (JWTs).
 
 Overview
 This server implements:
@@ -16,12 +15,14 @@ Requirements
 - PyJWT
 - cryptography
 - waitress
+- pytest
+- pytest-cov
 
 Installation
 1. Clone the repository
-2. Create a virtual environment:
+2. Create a virtual environment and activate it:
     python -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
+    On Windows: venv\Scripts\activate or .\venv\Scripts\Activate.ps1
 3. Install dependencies:
     pip install flask pyjwt cryptography waitress pytest pytest-cov
 
@@ -29,3 +30,7 @@ Usage
 Run the Server: 
     python main.py
 The server will start on http://0.0.0.0:8080
+
+Testing
+Run test_app.py:
+    python -m pytest tests/test_app.py --cov=app --cov-report=term-missing -v
