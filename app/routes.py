@@ -22,20 +22,6 @@ def rsa_key_to_jwk(key):
         "e": jwt.utils.base64url_encode(numbers.e.to_bytes((numbers.e.bit_length() + 7) // 8, "big")).decode()
     }
 
-# Add CORS headers to all responses
-@main.after_request
-def add_cors_headers(response):
-    response.headers['Access-Control-Allow-Origin'] = '*'
-    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
-    response.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization'
-    return response
-
-# Handle OPTIONS requests for CORS preflight
-@main.before_request
-def handle_options():
-    if request.method == "OPTIONS":
-        return jsonify({}), 200
-    
 # Root endpoint to check if the server is running    
 @main.route("/", methods=["GET"])
 def index():

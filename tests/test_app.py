@@ -13,12 +13,6 @@ def test_root_endpoint(client):
     assert rv.status_code == 200
     assert rv.get_json()["status"] == "ok"
 
-def test_cors_headers(client):
-    rv = client.get("/")
-    assert "Access-Control-Allow-Origin" in rv.headers
-    assert "Access-Control-Allow-Methods" in rv.headers
-    assert "Access-Control-Allow-Headers" in rv.headers
-
 def test_jwks(client):
     rv = client.get("/.well-known/jwks.json")
     assert rv.status_code == 200

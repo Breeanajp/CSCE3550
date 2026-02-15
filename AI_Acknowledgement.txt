@@ -1,0 +1,16 @@
+This is to acknowledge that AI has been used for the project to 
+to debug errors and explore the assignment/test cases.
+
+Prompts/Commands Used:
+- Can you explain keys, jwts, and clients
+- The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again. Here is my code: from flask import Flask app = Flask(__name__) @app.route('/') def index(): return 'Hello, world!' # Run the application (optional, for running directly) if __name__ == "__main__": app.run()
+- I keep getting the flask not imported error even though I pip installed it already and it runs when I click the link
+- (Attached assignment) What would code look like in python? Don't give me the whole answer I just want to know how it starts
+- (Attached code) What test cases code be done for my code
+- security\Project\tests> pytest test_app.py --cov=app --cov-report=term-missing
+Could not find platform independent libraries <prefix>
+====================== test session starts ======================
+platform win32 -- Python 3.13.7, pytest-9.0.2, pluggy-1.6.0       
+rootdir: C:\Users\Breez\Documents\School\Senior\Spring 2026\Cybersecurity\Project\tests
+plugins: cov-7.0.0
+-I committed before adding the git ignore so files still show up in repository. do i remove them or keep them as they'll be ignored?
